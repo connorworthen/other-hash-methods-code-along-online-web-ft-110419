@@ -9,13 +9,5 @@ require 'pry'
  }
 
 def get_the_min(groceries)
-  return nil if groceries.size == 0
-  min_key, min_value = name_hash.first
-   name_hash.each do |key, value|
-      # iterate over each value to check which one smaller than the return value
-      if value < min_value
-      min_key = key #just need the key
-      end
-   end
-   min_key
+  groceries = groceries.sort_by { |key| key }.to_h
 end
