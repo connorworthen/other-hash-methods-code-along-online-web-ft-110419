@@ -8,5 +8,5 @@ require 'pry'
  }
 
 def get_the_values(groceries)
-  my_hash_keys = groceries.map {|k,v| k}
+  p groceries.map {|x| x.keys}
 end
